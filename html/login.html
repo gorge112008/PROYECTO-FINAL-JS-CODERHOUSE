@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
+  <title>Proyecto: DeliPaso</title>
+  <link rel="stylesheet" type="text/css" href="../css/login.css" />
+</head>
+<body>
+  <div class="contain">
+    <div class="contain-fondo">
+      <img src="../css/foodleft.jpeg" />
+      <div class="contain-box">
+        <br />
+        <h2>LOGIN DELIPASO</h2>
+        <hr />
+        <br />
+        <form>
+          <ul>
+            <li>
+              <label for="usuario" class="form-label"><b>Usuario</b></label>
+              <input
+                type="text"
+                placeholder="Ingresar usuario"
+                id="usuario"
+                required
+              />
+            </li>
+            <br />
+            <li>
+              <label for="password" class="form-label"><b>Password</b></label>
+              <input
+                type="password"
+                placeholder="Ingresar password"
+                id="password"
+                required
+              />
+            </li>
+          </ul>
+          <br />
+          <div class="check">
+            <input type="checkbox" class="form-check-input" id="check" />
+            <label class="form-check-label" for="check">Recordar</label>
+          </div>
+          <br />
+          <button type="submit" class="btn-registrar" id="registrar">
+            REGISTRAR
+          </button>
+          <button type="button" class="ref-ingresar" id="ingresar">
+            INGRESAR
+          </button>
+          <a href="../ingreso.html" type="text" class="btn-exit" id="exit">
+            X
+          </a>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.24/dist/sweetalert2.all.min.js"></script>
+  <script src="../js/login.js"></script>
+</body>

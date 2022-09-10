@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Proyecto: DeliPaso</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/estilo.css" />
+    <script
+      src="https://kit.fontawesome.com/ddc8b3b9c4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id="cuerpo">
+    <header>
+      <div class="titulo">
+        <h2>
+          <i class="titulo-bienvenida">BIENVENIDO AL SIMULADOR INTERACTIVO DE VENTA DE COMIDA RÁPIDA: </i>
+          <div>
+            <b>***DELIPASO***</b>
+          </div>
+          <hr />
+        </h2>
+      </div>
+      <div id="navegador">
+        <h3>Seamos superhéroes al brindar un buen servicio!!!</h3>
+        <nav class="nav">
+          <ul class="nav__ul">
+            <li class="nav__li">
+              <i class="fas fa-house"></i
+              ><input
+                type="button"
+                value="Inicio"
+                id="btn_inicio"
+                class="btn"
+              />
+            </li>
+            <li class="nav__li">
+              <i class="fas fa-bell-concierge"></i
+              ><input 
+                type="button" 
+                value="Menú" 
+                id="btn_menu" 
+                class="btn" />
+            </li>
+            <li class="nav__li">
+              <i class="fas fa-circle-plus"></i
+              ><input
+                type="button"
+                value="Añadir Pedido"
+                id="btn_añadir"
+                class="btn"
+              />
+            </li>
+            <li class="hidden">
+              <i class="fas fa-circle-minus"></i
+              ><input
+                type="button"
+                value="Cancelar Pedido"
+                id="btn_cancelar"
+                class="btn"
+              />
+            </li>
+            <li class="nav__li">
+              <i class="fas fa-clipboard-check"></i
+              ><input
+                type="button"
+                value="Finalizar Pedido"
+                id="btn_finalizar"
+                class="btn"
+              />
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="inicio">
+    <h4><b>PROYECTO FINAL</b></h4>
+    <div id="inicio-contain">
+    <h4><b>*Descripción del Proyecto:</b></h4>
+		<p>	El proyecto se basa en la creación de un Simulador Interactivo de Venta de comida rápida.<br>
+		  <ul>
+				<li>El simulador cuenta con las siguientes funcionalidades:<br><br>
+          <hr><b>LOGIN:</b><hr>
+          <b>=>Permite el ingreso a la aplicación en forma de invitado o mediante un logueo.</b><br>
+          <b>=>El logueo puede darse por solo una sesión o se puede almacenar la sesión mediante un checkbox.</b><br>
+          <b>=>Para ingresar primero se debe hacer un registro y automaticamente se habilita la opción de ingreso.</b><br>
+          <b>=>Si se activa el checkbox de recordar, el usuario seguirá registrado después de cerrar sesión y
+            si se ingresa directamente, se podrá acceder a su sesión.</b><br>
+          <b>=>Al tener una sesión guardada, en el login se habilita la opción de nuevo, esto elimina el antiguo login y permite una nueva sesión.</b><br>
+          <b>=>Muestra notificaciones en caso de dejar algún campo en blanco, al ingresar al login un usuario previamente registrado,
+             al ingresar mal la contraseña de un usuario registrado.
+          </b><br>
+          <hr><b>SESIÓN:</b><hr>
+          <b>=>Permite el recorrido de opciones del simulador mediante una barra de navegación.</b><br>
+          <b>=>Muestra los menús disponibles de forma detallada.</b><br>
+          <b>=>Permite el ingreso de un nombre para el cliente atendido, caso contrario se le tomará como anónimo.</b><br>
+					<b>=>Permite seleccionar un filtrado de menús para distintas carteras.</b><br>
+					<b>=>Muestra la cantidad de menús disponibles en base al stock disponible.</b><br>
+          <b>=>Habilita la opción de añadir menús al pedido mediante selección luego de seleccionar el tipo de menú.</b><br>
+					<b>=>Habilita la opción de cancelar menús seleccionados en base a la cantidad pedida luego de añadir como mínimo un menú.</b><br>
+          <b>=>Deshabilita la opción de cancelar menús si se cancelan todos los menús del pedido.</b><br>
+					<b>=>Brinda una Pre-visualización del pedido detallado antes de finalizar el pedido.</b><br>
+					<b>=>Permite la finalización del pedido y visualización final del pedido detallado.</b><br>
+          <b>=>Permite realizar un nuevo pedido, reiniciando el stock.</b><br>
+				</li>
+			</ul>
+		</p>
+    </div>
+    <hr>
+		<b>	Nota importante: </b> 
+      <p>
+        Para que se ejecute el código correctamente es necesario abrirlo desde live server.
+      </p>
+    </div>
+    <div id="menu" class="hidden">
+      <div id="menu-contain">
+      <h4>*Menú Detallado:</h4>
+      <ol id="lista">
+        <!-- script lista menú -->
+      </ol>
+     </div>
+    </div>
+    <div id="pedido_realizar" class="hidden">
+      <div id="pedido_realizar-cliente">
+      <h4>*Nombre del cliente:</h4>
+      <input
+        type="text"
+        id="btn_cliente"
+        class="btn_cliente"
+      />
+      <input
+        type="button"
+        value="Validar"
+        id="btn_cliente-validar"
+        class="btn_cliente-validar"
+      />
+      </div>
+      <div id="pedido_realizar-seleccionar">
+      <h4>*Seleccionar Menú:</h4>
+      <input
+        type="button"
+        value="Menú Económico"
+        id="btn_economico"
+        class="btn_tipo-menu"
+      />
+      <input
+        type="button"
+        value="Menú Deluxe"
+        id="btn_deluxe"
+        class="btn_tipo-menu"
+      />
+      <input
+        type="button"
+        value="Todo el Menú Disponible"
+        id="btn_todomenu"
+        class="btn_tipo-menu"
+      />
+      </div>
+      <div id="pedido_realizar-menu" class="hidden">
+        <h4>AÑADIR PEDIDO</h4>
+        <ol id="pedido">
+          <!-- script lista menú -->
+        </ol>
+        <input
+          type="button"
+          value="AÑADIR"
+          id="btn_añadir-aceptar"
+          class="btn_añadir"
+        />
+      </div>
+    </div>
+    <div id="pedido_cancelar" class="hidden">
+      <h4>CANCELAR PEDIDO</h4>
+      <ol id="cancelado">
+        <!-- script cancelar menú -->
+      </ol>
+      <input
+        type="button"
+        value="CANCELAR"
+        id="btn_cancelar-aceptar"
+        class="btn_cancelar"
+      />
+    </div>
+    <div id="pedido_finalizar" class="hidden">
+      <h3 class="reporte_titulo"><!-- script titulo reporte --></h3>
+      <div class="reporte">
+      <!-- script reporte pedido -->
+      </div>    
+      <h2 id="gracias" class="hidden"><!-- script msj agradecimiento --></h2>
+      <input
+          type="button"
+          value="FINALIZAR"
+          id="btn_finalizar-aceptar"
+          class="btn_finalizar"
+        />
+    </div>
+    <div class="finalizar">
+      <hr />
+      <ul>
+        <li class="alumno">ALUMNO: <b>Jorge Carlos Gayoso Ugas. </b></li>
+      </ul>
+    </div>
+    <hr>
+    <div class="cerrar_sesion">
+      <input
+        type="button"
+        value="CERRAR SESION"
+        id="btn_sesion"
+        class="btn_cerrar-sesion"
+      />
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.24/dist/sweetalert2.all.min.js"></script>
+    <script src="../js/sesion.js"></script>
+  </body>
+</html>
